@@ -6,12 +6,14 @@ import tensorflow as tf
 import numpy as np
 from tensorflow.keras.preprocessing import image
 from urllib.parse import quote
+import joblib
+
 
 # Load the trained models
 with open('crop_recommendation_model.pkl', 'rb') as model_file:
-    loaded_model = pickle.load(model_file)
+    loaded_model = joblib.load(model_file)
 with open('fertilizer.pkl', 'rb') as model1_file:
-    loaded1_model = pickle.load(model1_file)
+    loaded1_model = joblib.load(model1_file)
 
 # Load the pre-trained model
 model_filename = "PlantDNet.h5"
