@@ -1,13 +1,13 @@
-Flask==2.2.2  # Latest stable release (compatible with Python 3.5-3.11)
-pandas==1.5.2  # Latest compatible version
-setuptools==63.0.0  # Latest stable release
-tensorflow==2.14.0 # Latest stable release (compatible with Python 3.7-3.11)
-numpy==1.23.5  # Latest stable release (compatible with Python 3.7-3.11)
-scikit-image==0.19.3  # Latest stable release (compatible with Python 3.7-3.11)
-gevent==22.10.2  # Latest stable release (compatible with Python 2.7 and 3.4-4.11)
-scikit-learn==1.1.3  # Latest stable release (compatible with Python 3.7-3.11)
-h5py==3.7.0  # Latest stable release (compatible with Python 3.6-3.11)
-protobuf==4.22.1  # Latest stable release (compatible with Python 2.7-3.11)
-gunicorn==21.2.0  # Latest stable release (compatible with Python 3.5-3.12)
-Werkzeug==2.2.2  # Latest stable release (compatible with Python 2.7-3.12)
-flask_ngrok # Latest stable release (compatible with Python 3.6-3.12)
+Flask==2.2.2 
+pandas==1.5.2 
+setuptools==63.0.0 
+tensorflow==2.14.0 
+numpy==1.23.5 
+scikit-image==0.19.3  
+gevent==22.10.2  
+scikit-learn==1.1.3  
+h5py==3.7.0 
+protobuf==4.22.1  
+gunicorn==21.2.0 
+Werkzeug==2.2.2
+flask_ngrok 
