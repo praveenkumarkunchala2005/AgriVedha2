@@ -59,13 +59,6 @@ if page == "Home":
         unsafe_allow_html=True,
     )
 
-    # Display two buttons
-    if st.button("Go to Crop Recommendation"):
-        page = "Crop Recommendation"
-
-    if st.button("Go to Disease Prediction"):
-        page = "Disease Prediction"
-
 
 # Disease Prediction Page
 if page == "Disease Prediction":
