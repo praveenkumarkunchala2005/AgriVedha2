@@ -7,3 +7,6 @@ protobuf
 tensorflow==2.13.0rc0
 gunicorn==21.2.0 
 Werkzeug==2.2.2
+googletrans
+h11==0.12.0
+
