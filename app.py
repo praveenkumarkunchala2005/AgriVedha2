@@ -143,20 +143,24 @@ if page == "Disease Prediction":
             try:
                 translator = Translator()
                 # Translate cure and prevention information
-                cure_translation = translator.translate(cure, dest=language_code).text
-                prevention_translation = translator.translate(prevention, dest=language_code).text
-                c = translator.translate(a, dest=language_code).text
-                d = translator.translate(b, dest=language_code).text
-                # Display the cure and prevention information
-                st.subheader(c)
-                st.subheader(d)
-                st.write(cure_translation)
-                st.write(prevention_translation)
+                cure_translation = translator.translate(cure, dest=language_code)
+                prevention_translation = translator.translate(prevention, dest=language_code)
+                # Check if translations are successful before accessing the text attribute
+                if cure_translation and prevention_translation:
+                    cure_text = cure_translation.text
+                    prevention_text = prevention_translation.text
+                    # Display the cure and prevention information
+                    st.subheader("Prediction Results")
+                    st.subheader("Cure and Prevention Information")
+                    st.write(cure_text)
+                    st.write(prevention_text)
+                else:
+                    st.warning("Translation failed. Please try again or choose a different language.")
             except Exception as e:
                 st.error(f"Translation error: {e}")
                 st.warning("Please try again or choose a different language.")
-        else:
-            st.warning("Please upload an image for disease prediction.")
+    else:
+        st.warning("Please upload an image for disease prediction.")
 
 
 
