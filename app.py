@@ -142,16 +142,16 @@ if page == "Disease Prediction":
             language_code = st.session_state["selected_language"]
             try:
                 translator = Translator()
-                translation1 = translator.translate(cure, dest=language_code)
-                translation2 = translator.translate(prevention, dest=language_code)
+                # Translate cure and prevention information
+                cure_translation = translator.translate(cure, dest=language_code).text
+                prevention_translation = translator.translate(prevention, dest=language_code).text
+                c = translator.translate(a, dest=language_code).text
+                d = translator.translate(b, dest=language_code).text
                 # Display the cure and prevention information
-                c = translator.translate(a, dest=language_code)
-                d = translator.translate(b, dest=language_code)
-
-                st.subheader(c.text)
-                st.subheader(d.text)
-                st.write(translation1.text)
-                st.write(translation2.text)
+                st.subheader(c)
+                st.subheader(d)
+                st.write(cure_translation)
+                st.write(prevention_translation)
             except Exception as e:
                 st.error(f"Translation error: {e}")
                 st.warning("Please try again or choose a different language.")
