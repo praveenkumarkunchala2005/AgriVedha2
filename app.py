@@ -146,7 +146,7 @@ if page == "Disease Prediction":
                 cure_translation = translator.translate(cure, dest=language_code)
                 prevention_translation = translator.translate(prevention, dest=language_code)
                 # Check if translations are successful before accessing the text attribute
-                if cure_translation and prevention_translation:
+                if cure_translation and cure_translation.text and prevention_translation and prevention_translation.text:
                     cure_text = cure_translation.text
                     prevention_text = prevention_translation.text
                     # Display the cure and prevention information
