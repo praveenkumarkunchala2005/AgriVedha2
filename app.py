@@ -149,6 +149,7 @@ if page == "Disease Prediction":
                 d = translator.translate(b)
 
                 st.subheader(c)
+                st.write(result)
                 st.subheader(d)
                 st.write(translation1)
                 st.write(translation2)
