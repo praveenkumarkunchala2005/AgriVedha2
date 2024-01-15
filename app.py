@@ -7,7 +7,7 @@ import numpy as np
 from tensorflow.keras.preprocessing import image
 from urllib.parse import quote
 import joblib
-from googletrans import Translator
+from translate import Translator
 
 # Load the trained models
 with open('crop_recommendation_model.pkl', 'rb') as model_file:
@@ -141,21 +141,17 @@ if page == "Disease Prediction":
             b = "Cure and Prevention Information"
             language_code = st.session_state["selected_language"]
             try:
-                translator = Translator()
-                # Translate cure and prevention information
-                cure_translation = translator.translate(cure, dest=language_code)
-                prevention_translation = translator.translate(prevention, dest=language_code)
-                # Check if translations are successful before accessing the text attribute
-                if cure_translation and cure_translation.text and prevention_translation and prevention_translation.text:
-                    cure_text = cure_translation.text
-                    prevention_text = prevention_translation.text
-                    # Display the cure and prevention information
-                    st.subheader("Prediction Results")
-                    st.subheader("Cure and Prevention Information")
-                    st.write(cure_text)
-                    st.write(prevention_text)
-                else:
-                    st.warning("Translation failed. Please try again or choose a different language.")
+                translator= Translator(to_lang=language_code)
+                translation1 = translator.translate(cure)
+                translation2 = translator.translate(prevention)
+                # Display the cure and prevention information
+                c = translator.translate(a)
+                d = translator.translate(b)
+
+                st.subheader(c)
+                st.subheader(d)
+                st.write(translation1)
+                st.write(translation2)
             except Exception as e:
                 st.error(f"Translation error: {e}")
                 st.warning("Please try again or choose a different language.")
