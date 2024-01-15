@@ -80,7 +80,7 @@ if page == "Disease Prediction":
     if st.button("Select Language"):
         language_code = languages[selected_language]
         st.success(f"Selected Language: {selected_language}")
-        st.session_state.selected_language = language_code
+        st.session_state["selected_language"] = language_code
 
     # Button to trigger disease prediction
     if st.button("Predict Disease") and st.session_state.get("selected_language"):
@@ -139,7 +139,7 @@ if page == "Disease Prediction":
             
             a = "Prediction Results"
             b = "Cure and Prevention Information"
-            language_code = st.session_state.selected_language
+            language_code = st.session_state["selected_language"]
             try:
                 translator = Translator()
                 translation1 = translator.translate(cure, dest=language_code)
