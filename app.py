@@ -180,3 +180,4 @@ elif page == "Crop Recommendation":
         st.write("The following crops are recommended based on the nutrient values you have provided.")
         st.write(f"Crop Name: {prediction1}")
         st.write(f"Fertilizer Name: {prediction2}")
+
