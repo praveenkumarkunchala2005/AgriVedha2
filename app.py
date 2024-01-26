@@ -80,7 +80,7 @@ if page == "Disease Prediction":
     if st.button("Select Language"):
         language_code = languages[selected_language]
         st.success(f"Selected Language: {selected_language}")
-        st.session_state["selected_language"] = language_code
+        st.session_state["selected_language"] = language_code 
 
     # Button to trigger disease prediction
     if st.button("Predict Disease") and st.session_state.get("selected_language"):
@@ -156,8 +156,8 @@ if page == "Disease Prediction":
             except Exception as e:
                 st.error(f"Translation error: {e}")
                 st.warning("Please try again or choose a different language.")
-    else:
-        st.warning("Please upload an image for disease prediction.")
+        else:
+            st.warning("Please upload an image for disease prediction.")
 
 
 
@@ -180,5 +180,3 @@ elif page == "Crop Recommendation":
         st.write("The following crops are recommended based on the nutrient values you have provided.")
         st.write(f"Crop Name: {prediction1}")
         st.write(f"Fertilizer Name: {prediction2}")
-
-
