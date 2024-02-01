@@ -30,7 +30,7 @@ def model_predict(img_path, model):
     return preds
 
 # Streamlit app
-st.title("AgriVedha")
+st.title("ArgoTechCrops")
 
 # Navigation
 page = st.sidebar.selectbox("Select a page:", ["Home", "Disease Prediction", "Crop Recommendation"])
