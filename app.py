@@ -53,7 +53,7 @@ if page == "Home":
     )
 
     # Centered content
-    st.markdown("<h1>Welcome to the AgriVedha App!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1>Welcome to the ArgoTechCrops WebApp!</h1>", unsafe_allow_html=True)
     st.markdown(
         "<p>This app provides tools for disease prediction and crop recommendation.</p>",
         unsafe_allow_html=True,
