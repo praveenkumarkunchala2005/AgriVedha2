@@ -30,7 +30,7 @@ def model_predict(img_path, model):
     return preds
 
 # Streamlit app
-st.title("ArgoTechCrops")
+st.title("AgroTechCrops")
 
 # Navigation
 page = st.sidebar.selectbox("Select a page:", ["Home", "Disease Prediction", "Crop Recommendation"])
@@ -53,7 +53,7 @@ if page == "Home":
     )
 
     # Centered content
-    st.markdown("<h1>Welcome to the ArgoTechCrops WebApp!</h1>", unsafe_allow_html=True)
+    st.markdown("<h1>Welcome to the AgroTechCrops WebApp!</h1>", unsafe_allow_html=True)
     st.markdown(
         "<p>This app provides tools for disease prediction and crop recommendation.</p>",
         unsafe_allow_html=True,
